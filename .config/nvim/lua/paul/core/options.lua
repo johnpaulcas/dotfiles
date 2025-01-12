@@ -19,10 +19,6 @@ opt.autoindent = true -- copy indent from current line when starting new one
 
 opt.wrap = false
 
--- Vertical scroll and center
-vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
-vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
-
 -- search settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
