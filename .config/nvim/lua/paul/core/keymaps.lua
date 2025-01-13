@@ -23,3 +23,27 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+
+-- clear search highlights --
+keymap.set("n", "<Esc>", ":nohlsearch<CR>")
+keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+
+-- Vertical scroll and center
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Verical block search and center
+keymap.set("n", "{", "{zz")
+keymap.set("n", "}", "}zz")
+
+-- Center screen when searching forward and backward
+keymap.set("n", "n", "nzz")
+keymap.set("n", "N", "Nzz")
+
+-- Center screen when searching for word under cursor
+keymap.set("n", "*", "*zz")
+keymap.set("n", "#", "#zz")
+
+-- Center when jumping between search matches with / and ?
+keymap.set("n", "/", "/\\v")
+keymap.set("n", "?", "?\\v")
