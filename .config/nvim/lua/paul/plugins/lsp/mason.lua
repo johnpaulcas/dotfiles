@@ -38,6 +38,7 @@ return {
         "emmet_ls",
         "prismals",
         "pyright",
+        "solidity_ls_nomicfoundation",
       },
     })
 
