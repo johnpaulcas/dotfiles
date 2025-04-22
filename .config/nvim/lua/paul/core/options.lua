@@ -2,7 +2,8 @@
 
 -- cursor
 -- vim.cmd([[highlight Cursor guifg=white guibg=#16C47F]])
-vim.opt.guicursor = "n-v-c:block,i-ci-ve:block-blinkwait700-blinkoff400-blinkon250"
+-- vim.opt.guicursor = "n-v-c:block,i-ci-ve:block-blinkwait700-blinkoff400-blinkon250"
+vim.opt.guicursor = "n-v-c-i-ci-ve:block-blinkwait700-blinkoff400-blinkon250"
 vim.api.nvim_set_hl(0, "CursorLine", { bg = "#013754" })
 
 local opt = vim.opt

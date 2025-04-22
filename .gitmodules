@@ -1,0 +1,15 @@
+[submodule "Desktop/workstation/playground/coding-practice/lib/forge-std"]
+	path = Desktop/workstation/playground/coding-practice/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Desktop/workstation/sovrn/rnd-ctf/ctf-amm/lib/forge-std"]
+	path = Desktop/workstation/sovrn/rnd-ctf/ctf-amm/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Desktop/workstation/sovrn/rnd-ctf/ctf-amm/lib/conditional-tokens-contracts"]
+	path = Desktop/workstation/sovrn/rnd-ctf/ctf-amm/lib/conditional-tokens-contracts
+	url = https://github.com/gnosis/conditional-tokens-contracts
+[submodule "Desktop/workstation/sovrn/rnd-ctf/ctf-amm/lib/openzeppelin-contracts"]
+	path = Desktop/workstation/sovrn/rnd-ctf/ctf-amm/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "Desktop/workstation/sovrn/rnd-ctf/exchange-sc/lib/forge-std"]
+	path = Desktop/workstation/sovrn/rnd-ctf/exchange-sc/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
