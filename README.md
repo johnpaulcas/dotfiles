@@ -1,9 +1,9 @@
 # 🛠️ Dotfiles
 
 Minimal, personal Neovim + terminal setup powered by [`lazy.nvim`](https://github.com/folke/lazy.nvim).  
-Fast, clean, and ready to go — with LSP 🧠, fuzzy find 🔍, formatting ✨, autocompletion 🚀, and beautiful themes 🎨.
+Fast, clean, and ready to go - with LSP 🧠, fuzzy find 🔍, formatting ✨, autocompletion 🚀, and beautiful themes 🎨.
 
-I use [Ghostty](https://ghostty.io) as my terminal — GPU-rendered, ligature support, and blazing fast.
+I use [Ghostty](https://ghostty.io) as my terminal - GPU-rendered, ligature support, and blazing fast.
 
 ---
 
@@ -27,7 +27,18 @@ I use [Ghostty](https://ghostty.io) as my terminal — GPU-rendered, ligature su
 
 ## 📦 Requirements
 
-Install these first:
+> 💡 This setup uses [Homebrew](https://brew.sh) to install dependencies.
+
+If you don't have Homebrew installed, run the command below:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+> 🔗 Visit [brew.sh](https://brew.sh) to check for the latest installation command if the one above doesn't work.
+
+
+Install the following tools using Homebrew:
 
 ```bash
 brew install fzf tmux neovim git node rust python lazygit
