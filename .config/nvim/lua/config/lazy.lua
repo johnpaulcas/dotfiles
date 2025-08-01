@@ -40,6 +40,7 @@ require("lazy").setup({
 		{ import = "plugins.conform" },
 		{ import = "plugins.statusline" },
 		{ import = "plugins.blink-cmp" },
+		{ import = "plugins.flash" },
 
 		-- lsp imports
 		{ import = "plugins.rustaceanvim" },
