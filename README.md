@@ -1,8 +1,9 @@
-# Dotfiles
+# 🛠️ Dotfiles
 
-🎯 My personal minimal Neovim setup powered by [`lazy.nvim`](https://github.com/folke/lazy.nvim).
+Minimal, personal Neovim + terminal setup powered by [`lazy.nvim`](https://github.com/folke/lazy.nvim).  
+Fast, clean, and ready to go — with LSP 🧠, fuzzy find 🔍, formatting ✨, autocompletion 🚀, and beautiful themes 🎨.
 
-It comes with everything I need out of the box: LSP 🧠, fuzzy finding 🔍, formatting ✨, autocompletion 🚀, and themes 🎨 that actually make editing feel good.
+I use [Ghostty](https://ghostty.io) as my terminal — GPU-rendered, ligature support, and blazing fast.
 
 ---
 
@@ -19,115 +20,88 @@ It comes with everything I need out of the box: LSP 🧠, fuzzy finding 🔍, fo
 - 📐 **Indent Detection**: [`guess-indent.nvim`](https://github.com/nmac427/guess-indent.nvim)
 - 💬 **Startup Goodies**: [`snacks.nvim`](https://github.com/folke/snacks.nvim)
 - 📌 **Navigation**: [`harpoon`](https://github.com/ThePrimeagen/harpoon)
+- ⚡ **Motion & Navigation**: [`flash.nvim`](https://github.com/folke/flash.nvim)
 - 🎨 **Themes**: Rose Pine & Catppuccin
 
 ---
 
-## ⚙️ [Installation](#%ef%b8%8f-installation)
+## 📦 Requirements
 
-### 📦 [Prerequisites](#%f0%9f%93%a6-prerequisites)
-
-- [Neovim >= 0.10](https://neovim.io)
-- [git](https://git-scm.com)
-- [Homebrew (macOS)](https://brew.sh)
-- [Node/npm](https://nodejs.org)
-- [Rust (via rustup)](https://rustup.rs)
-- [Python 3](https://www.python.org)
-- [A Nerd Font (JetBrainsMono, Hack, etc.)](https://www.nerdfonts.com/font-downloads)
-- [tmux](https://github.com/tmux/tmux) + [TPM](https://github.com/tmux-plugins/tpm)
-- [fzf](https://github.com/junegunn/fzf)
+Install these first:
 
 ```bash
-brew install fzf
-$(brew --prefix)/opt/fzf/install  # optional fuzzy key bindings
+brew install fzf tmux neovim git node rust python lazygit
 ```
+
+- [Homebrew (macOS)](https://brew.sh)
+- [Neovim ≥ 0.10](https://neovim.io)
+- [fzf](https://github.com/junegunn/fzf)
+- [Rust](https://rustup.rs)
+- [Node.js & npm](https://nodejs.org)
+- [Python 3](https://www.python.org)
+- [git](https://git-scm.com)
+- [tmux](https://github.com/tmux/tmux)  
+  ➕ Required for plugin support: [TPM (Tmux Plugin Manager)](https://github.com/tmux-plugins/tpm)
+- [A Nerd Font](https://www.nerdfonts.com/font-downloads) (JetBrainsMono, Hack, etc.)
+- For enhanced `z` + `cd` experience: [Zinit](https://github.com/zdharma-continuum/zinit)
+- Recommended: [Lazygit](https://github.com/jesseduffield/lazygit)
+
+---
 
 ### 🛠️ Setup Steps
 
-1. **Backup your existing config**
+## ⚙️ Setup
 
-   ```bash
-   mv ~/.config/nvim ~/.config/nvim.bak
-   ```
+> Make sure to back up your existing configs before proceeding.
 
-2. **Create the config directory**
+### 1. Backup existing configs
 
-   ```bash
-   mkdir -p ~/.config
-   ```
-
-3. **Clone the dotfiles repo**
-
-   ```bash
-   git clone https://github.com/yourname/dotfiles ~/.dotfiles
-   ```
-
-4. **Check that the config exists**
-
-   ```bash
-   ls ~/.dotfiles/.config/nvim
-   ```
-
-5. **Symlink Neovim config**
-
-   ```bash
-   ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
-   ```
-
-6. **Open Neovim to install plugins**
-
-   ```bash
-   nvim
-   ```
-
-> ⚠️ Make sure `~/.config/nvim` is not a real folder before symlinking. Remove or move it first.
-
----
-
-## 🧩 Plugin Dependencies (via Mason)
-
-Run `:Mason` inside Neovim to manage tools.
-
-Install the following:
-
-- Lua: `stylua`
-- Python: `black`, `isort`, `pylint`
-- JS/TS: `prettierd`, `prettier`
-- Rust: `rust-analyzer`, `rustfmt`
-- Markdown: `marksman`
-
----
-
-## 🎛️ Keybindings
-
-| Key          | Action                   |
-| ------------ | ------------------------ |
-| `<leader>a`  | ➕ Harpoon: Add file      |
-| `<C-e>`      | 📋 Harpoon: Toggle menu  |
-| `<leader>ff` | 🔍 FZF: Find files       |
-| `<leader>fg` | 🔎 FZF: Live grep        |
-| `<leader>cf` | ✨ Format code (Conform)  |
-| `<leader>nh` | ❌ Clear search highlight |
-| `lg`         | 🐞 Show diagnostics      |
-| `-`          | 📁 Open parent dir (Oil) |
-
-LSP-specific bindings like rename, code actions, and navigation are attached per buffer.
-
----
-
-## 🌳 Treesitter Languages
-
-```
-c, lua, vim, elixir, heex, javascript, typescript, tsx, html, css,
-yaml, markdown, markdown_inline, json, dockerfile, solidity, rust,
-python, bash, gitignore, prisma, query
+```bash
+[ -d ~/.config/nvim ] && mv ~/.config/nvim ~/.config/nvim.bak
+[ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak
+[ -f ~/.tmux.conf ] && mv ~/.tmux.conf ~/.tmux.conf.bak
 ```
 
+### 2. Clone this repo
+
+```bash
+git clone https://github.com/johnpaulcas/dotfiles ~/.dotfiles
+```
+
+### 3. Create config folder
+
+```bash
+mkdir -p ~/.config
+```
+
+### 4. Symlink configs
+
+```bash
+# Neovim
+ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
+
+# Tmux (optional)
+ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
+
+# Zsh (optional)
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+```
+
+> ⚠️ Make sure `~/.config/nvim` does not already exist before symlinking.
+
+### 5. Launch Neovim
+
+```bash
+nvim
+```
+
+Neovim will install all plugins via `lazy.nvim` on first launch.
+
 ---
 
-## 🖋 Recommended Fonts
+## 🖋 Fonts
 
-Use any Nerd Font for icon support:
+Use any Nerd Font for icon support in Neovim, Tmux, and Zsh:
 
 - [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
 - FiraCode Nerd Font
@@ -135,13 +109,14 @@ Use any Nerd Font for icon support:
 
 ---
 
-## 💡 Notes
+## 💡 Tips
 
-- Themes are controlled in `lazy.lua`
-- Use `:Mason` to install missing tools
-- `blink.cmp` benefits from Rust nightly if building from source
-- Install [TPM](https://github.com/tmux-plugins/tpm) for tmux theming support
+- `:Lazy` — open the plugin manager
+- `:Mason` — manage LSP servers and tools
+- `:CheckHealth` — check system dependencies
+- `<leader>ff` — fuzzy file finder
+- Customize themes in `lazy.lua`
 
 ---
 
-Happy Hacking ✨
+Happy Hacking 💻✨
