@@ -211,8 +211,6 @@ return {
 
 			basedpyright = {},
 
-			rust_analyzer = {},
-
 			ts_ls = {},
 
 			lua_ls = {
