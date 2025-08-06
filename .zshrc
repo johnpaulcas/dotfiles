@@ -58,14 +58,15 @@ zinit light zsh-users/zsh-syntax-highlighting
 # FZF-powered tab completion menu
 zinit light Aloxaf/fzf-tab
 
-# Jump to frequently used dirs (e.g., `z my-folder`)
-zinit light rupa/z
-
 # Git plugin from Oh My Zsh (aliases like gst, gco, gl)
 zinit snippet https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh
 
 # Docker plugin from Oh My Zsh (aliases like dcu, dps)
 zinit snippet https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/docker/docker.plugin.zsh
+
+# Replace `z` with modern `zoxide`
+zinit light ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
 
 # ───────────────────────────────────────────────────────────────
 # fzf-tab preview tweak (pretty previews with bat)
