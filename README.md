@@ -44,6 +44,7 @@ Install the following tools using Homebrew:
 brew install fzf tmux neovim git node rust python lazygit starship
 ```
 
+
 - [Homebrew (macOS)](https://brew.sh)
 - [Neovim ≥ 0.10](https://neovim.io)
 - [fzf](https://github.com/junegunn/fzf)
@@ -107,6 +108,28 @@ nvim
 ```
 
 Neovim will install all plugins via `lazy.nvim` on first launch.
+
+---
+
+Install tmux/tpm
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+After installation enter to tmux mode by running
+
+```bash
+tmux
+```
+
+Reload TMUX environment so TPM is sourced:
+
+```bash
+tmux source ~/.tmux.conf
+```
+
+Press prefix + I (capital i, as in Install) to fetch the plugin
 
 ---
 
