@@ -3,7 +3,7 @@
 Minimal, personal Neovim + terminal setup powered by [`lazy.nvim`](https://github.com/folke/lazy.nvim).  
 Fast, clean, and ready to go - with LSP 🧠, fuzzy find 🔍, formatting ✨, autocompletion 🚀, and beautiful themes 🎨.
 
-I use [Ghostty](https://ghostty.io) as my terminal - GPU-rendered, ligature support, and blazing fast.
+I use [Ghostty](https://ghostty.org) as my terminal - GPU-rendered, ligature support, and blazing fast.
 
 ---
 
