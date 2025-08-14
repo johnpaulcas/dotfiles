@@ -41,7 +41,7 @@ If you don't have Homebrew installed, run the command below:
 Install the following tools using Homebrew:
 
 ```bash
-brew install fzf tmux neovim git node rust python lazygit
+brew install fzf tmux neovim git node rust python lazygit starship
 ```
 
 - [Homebrew (macOS)](https://brew.sh)
