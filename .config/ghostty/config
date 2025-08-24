@@ -4,6 +4,7 @@ font-family = "JetBrainsMono Nerd Font"
 
 cursor-style = block
 cursor-style-blink = true
+shell-integration-features = no-cursor
 
 # for rose pine dawn cursor
 # cursor-color = #907aa9
