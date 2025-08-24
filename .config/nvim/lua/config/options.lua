@@ -6,7 +6,22 @@ vim.opt.softtabstop = 4 -- Number of spaces a <Tab> feels like when editing
 vim.opt.smarttab = true -- Makes tabbing smarter, will insert shiftwidth spaces
 vim.opt.smartindent = true -- Makes indenting smart (for things like { })
 vim.opt.autoindent = true -- Auto-indents new lines to match previous line
-vim.opt.guicursor = ""
+vim.opt.guicursor = table.concat({
+	"n-v:block-blinkwait400-blinkon700-blinkoff500", -- slower, relaxed blink
+	"i-ci:block-blinkwait100-blinkon250-blinkoff200", -- faster blink while typing
+	"r-cr:hor30",
+	"o:hor30",
+}, ",")
+
+-- Enable 24-bit (truecolor) support in the terminal UI.
+-- Makes theme colors and highlights (e.g. Visual, PmenuSel) render accurately,
+-- especially when running inside tmux/Ghostty.
+vim.opt.termguicolors = true
+
+-- Show BOTH the current line highlight and the line number highlight.
+-- Options: "line" (line only), "number" (gutter only), "both".
+-- Note: requires `vim.opt.cursorline = true` to have any effect.
+vim.opt.cursorlineopt = "both"
 
 -- Line numbering
 vim.opt.number = true -- Show absolute line numbers
