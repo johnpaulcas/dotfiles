@@ -30,7 +30,9 @@ require("lazy").setup({
 		{ import = "plugins.fzf" },
 		{ import = "plugins.nvim-treesitter" },
 		{ import = "plugins.lsp" },
+
 		{ import = "plugins.rose-pine" },
+		-- { import = "plugins/darcula-dark" },
 		-- { import = "plugins.catppuccin" },
 		{ import = "plugins.oil" },
 		{ import = "plugins.harpoon" },
