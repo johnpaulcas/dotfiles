@@ -62,9 +62,22 @@ return {
 			-- NOTE: Highlight groups are extended (merged) by default. Disable this
 			-- per group via `inherit = false`
 			highlight_groups = {
+				-- INSERTED: aggressive selection + clearer focus (IntelliJ-ish)
+				-- Visual = { bg = "#2F65CA", inherit = false }, -- IntelliJ-ish blue
+				-- Visual = { bg = "gold", inherit = false },
+				Visual = { bg = "#2E6F85", inherit = false },
+				VisualNOS = { link = "Visual" },
+
+				CursorLine = { bg = "highlight_low" },
+				CursorLineNr = { fg = "text", bold = true },
+				-- Search = { bg = "#2E6F85", fg = "base", bold = true },
+				-- IncSearch = { bg = "rose", fg = "base", bold = true },
+				PmenuSel = { bg = "rose", fg = "base", bold = true },
+
 				-- Comment = { fg = "foam" },
-				-- StatusLine = { fg = "love", bg = "love", blend = 15 },
-				-- VertSplit = { fg = "muted", bg = "muted" },
+				StatusLine = { fg = "love", bg = "love", blend = 15 },
+				VertSplit = { fg = "muted", bg = "muted" },
+				-- Visual = { fg = "base", bg = "text", inherit = false },
 				-- Visual = { fg = "base", bg = "text", inherit = false },
 			},
 
