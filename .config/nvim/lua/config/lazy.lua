@@ -34,9 +34,11 @@ require("lazy").setup({
 		{ import = "plugins.rose-pine" },
 		-- { import = "plugins/darcula-dark" },
 		-- { import = "plugins.catppuccin" },
+
 		{ import = "plugins.oil" },
 		{ import = "plugins.harpoon" },
 		{ import = "plugins.snack" },
+		{ import = "plugins.colorizer" },
 		-- { import = "plugins.sleuth-vim" },
 		{ import = "plugins.autoindent" },
 		{ import = "plugins.conform" },
