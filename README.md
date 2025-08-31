@@ -92,6 +92,9 @@ mkdir -p ~/.config
 # Neovim
 ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 
+# Ghostty
+ln -s ~/.dotfiles/.config/ghostty ~/.config/ghostty
+
 # Tmux (optional)
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
