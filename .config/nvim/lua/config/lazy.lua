@@ -31,9 +31,10 @@ require("lazy").setup({
 		{ import = "plugins.nvim-treesitter" },
 		{ import = "plugins.lsp" },
 
-		{ import = "plugins.rose-pine" },
+		-- { import = "plugins.rose-pine" },
 		-- { import = "plugins/darcula-dark" },
 		-- { import = "plugins.catppuccin" },
+		{ import = "plugins.tokyonight" },
 
 		{ import = "plugins.oil" },
 		{ import = "plugins.harpoon" },
@@ -52,7 +53,7 @@ require("lazy").setup({
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
-	install = { colorscheme = { "rose-pine" } },
+	install = { colorscheme = { "tokyonight" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 	change_detection = {
