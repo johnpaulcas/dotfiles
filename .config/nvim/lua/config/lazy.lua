@@ -47,6 +47,7 @@ require("lazy").setup({
 		{ import = "plugins.blink-cmp" },
 		{ import = "plugins.flash" },
 		{ import = "plugins.autopairs" },
+		{ import = "plugins.dadbod" },
 
 		-- lsp imports
 		{ import = "plugins.rustaceanvim" },
