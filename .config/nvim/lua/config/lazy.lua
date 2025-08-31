@@ -48,6 +48,7 @@ require("lazy").setup({
 		{ import = "plugins.flash" },
 		{ import = "plugins.autopairs" },
 		{ import = "plugins.dadbod" },
+		{ import = "plugins.toggleterm" },
 
 		-- lsp imports
 		{ import = "plugins.rustaceanvim" },
