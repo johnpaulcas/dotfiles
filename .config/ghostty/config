@@ -12,8 +12,8 @@ cursor-color = #c4a7e7
 # cursor-color = #907aa9
 
 #custom-shader-animation = true
-#custom-shader = shaders/cursor_smear.glsl
-#custom-shader-animation = always
+# custom-shader = shaders/cursor_smear.glsl
+# custom-shader-animation = always
 
 macos-option-as-alt = true
 
