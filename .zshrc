@@ -1,5 +1,7 @@
 stty -ixon
 
+PROMPT_EOL_MARK=$'\u23CE '  
+
 # ───────────────────────────────────────────────────────────────
 # Starship prompt configuration
 export STARSHIP_CONFIG="$HOME/.dotfiles/.config/starship/starship.toml"
