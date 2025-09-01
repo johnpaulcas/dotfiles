@@ -213,6 +213,8 @@ return {
 
 			ts_ls = {},
 
+			postgrestools = {},
+
 			lua_ls = {
 				-- cmd = { ... },
 				-- filetypes = { ... },
