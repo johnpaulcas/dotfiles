@@ -49,6 +49,7 @@ require("lazy").setup({
 		{ import = "plugins.autopairs" },
 		{ import = "plugins.dadbod" },
 		{ import = "plugins.toggleterm" },
+		{ import = "plugins.gitlinker" },
 
 		-- lsp imports
 		{ import = "plugins.rustaceanvim" },
