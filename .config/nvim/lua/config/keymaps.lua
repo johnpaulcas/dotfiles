@@ -28,3 +28,43 @@ vim.keymap.set("n", "#", "#zz")
 vim.keymap.set("n", "<leader>cf", function()
 	require("conform").format({ lsp_format = "fallback" })
 end, { desc = "format code" })
+
+-- diagnostic and repeat action
+local last_diag_jump = nil
+
+-- Jump any diagnostic
+vim.keymap.set("n", "]d", function()
+	vim.diagnostic.goto_next()
+	last_diag_jump = function()
+		vim.diagnostic.goto_next()
+	end
+end, { desc = "Next Diagnostic" })
+
+vim.keymap.set("n", "[d", function()
+	vim.diagnostic.goto_prev()
+	last_diag_jump = function()
+		vim.diagnostic.goto_prev()
+	end
+end, { desc = "Prev Diagnostic" })
+
+-- Jump only errors
+vim.keymap.set("n", "]e", function()
+	vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
+	last_diag_jump = function()
+		vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
+	end
+end, { desc = "Next Error" })
+
+vim.keymap.set("n", "[e", function()
+	vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+	last_diag_jump = function()
+		vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
+	end
+end, { desc = "Prev Error" })
+
+-- Repeat last diagnostic/error jump with `;`
+vim.keymap.set("n", ";", function()
+	if last_diag_jump then
+		last_diag_jump()
+	end
+end, { desc = "Repeat last diagnostic/error jump" })
