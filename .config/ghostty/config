@@ -5,9 +5,9 @@ font-family = "JetBrainsMono Nerd Font"
 
 
 # cursor-style = block
-# cursor-style = bar
-# cursor-style-blink = true
-# shell-integration-features = no-cursor
+cursor-style = bar
+cursor-style-blink = false
+shell-integration-features = no-cursor
 
 # for rose pine
 cursor-color = #c4a7e7
