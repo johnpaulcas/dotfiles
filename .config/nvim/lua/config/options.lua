@@ -13,7 +13,8 @@ vim.opt.autoindent = true -- Auto-indents new lines to match previous line
 -- 	"r-cr:hor30",
 -- 	"o:hor30",
 -- }, ",")
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
+vim.opt.guicursor = "n-v-c:block,i-ci:ver25,r-cr:hor20"
 
 -- Enable 24-bit (truecolor) support in the terminal UI.
 -- Makes theme colors and highlights (e.g. Visual, PmenuSel) render accurately,
