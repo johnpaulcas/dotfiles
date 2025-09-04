@@ -1,6 +1,8 @@
 stty -ixon
 
 PROMPT_EOL_MARK=$'\u23CE '  
+precmd() { printf '\e[6 q' }
+ZVM_CURSOR_STYLE_ENABLED=false
 
 # ───────────────────────────────────────────────────────────────
 # Starship prompt configuration
