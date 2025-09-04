@@ -3,9 +3,11 @@ theme = tokyonight-storm
 
 font-family = "JetBrainsMono Nerd Font"
 
-cursor-style = block
-cursor-style-blink = true
-shell-integration-features = no-cursor
+
+# cursor-style = block
+# cursor-style = bar
+# cursor-style-blink = true
+# shell-integration-features = no-cursor
 
 # for rose pine
 cursor-color = #c4a7e7
@@ -13,11 +15,17 @@ cursor-color = #c4a7e7
 # cursor-color = #907aa9
 
 #custom-shader-animation = true
-# custom-shader = shaders/cursor_smear.glsl
+#custom-shader = shaders/cursor_debug.glsl
+custom-shader = shaders/cursor_smear.glsl
+#custom-shader = shaders/cursor_frozen.glsl
 # custom-shader-animation = always
 
 macos-option-as-alt = true
+adjust-cursor-thickness=10
+# adjust-box-thickness=-80%
+#background-opacity=0.7
 
 clipboard-trim-trailing-spaces = true
 mouse-hide-while-typing = true
 macos-titlebar-proxy-icon = hidden
+
