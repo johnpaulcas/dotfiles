@@ -65,6 +65,7 @@ vec4 saturate(vec4 color, float factor) {
 }
 
 vec4 TRAIL_COLOR = iCurrentCursorColor;
+// vec4 TRAIL_COLOR = vec4(0.49, 0.812, 1.0, 1.0);
 const float OPACITY = 0.6;
 const float DURATION = 0.3; //IN SECONDS
 
