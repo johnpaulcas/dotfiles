@@ -21,7 +21,7 @@ custom-shader = shaders/cursor_smear.glsl
 # custom-shader-animation = always
 
 macos-option-as-alt = true
-adjust-cursor-thickness=10
+adjust-cursor-thickness=3
 # adjust-box-thickness=-80%
 #background-opacity=0.7
 
