@@ -9,15 +9,21 @@ cursor-style = bar
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
-# for rose pine
+
+# for rose pine (favorate)
 cursor-color = #c4a7e7
+
+# cursor-color = #a9b1d6
 #cursor-color = #ebbcba
 # cursor-color = #907aa9
+# cursor-color = #c0caf5
+# cursor-color=#7aa2f7
+# cursor-color = #bb9af7
 
 #custom-shader-animation = true
-#custom-shader = shaders/cursor_debug.glsl
+# custom-shader = shaders/cursor_debug.glsl
 custom-shader = shaders/cursor_smear.glsl
-#custom-shader = shaders/cursor_frozen.glsl
+# custom-shader = shaders/cursor_frozen.glsl
 # custom-shader-animation = always
 
 macos-option-as-alt = true
