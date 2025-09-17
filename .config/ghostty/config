@@ -1,4 +1,5 @@
-theme = tokyonight-storm
+#theme = TokyoNight Storm
+theme = TokyoNight Moon
 # theme = rose-pine
 
 font-family = "JetBrainsMono Nerd Font"
