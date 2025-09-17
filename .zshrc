@@ -80,3 +80,5 @@ eval "$(zoxide init zsh)"
 zstyle ':completion:*' fzf-preview \
   'bat --style=numbers --color=always --line-range :500 {} 2>/dev/null || cat {} 2>/dev/null'
 zstyle ':completion:*' fzf-completion-opts '--layout=reverse --info=inline'
+
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
