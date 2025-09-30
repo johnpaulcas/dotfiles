@@ -40,6 +40,9 @@ export NVM_DIR="$HOME/.nvm"
 # Add Cargo-installed binaries (e.g. sqlx) to PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
+
 # ───────────────────────────────────────────────────────────────
 # Zinit plugin manager setup
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
