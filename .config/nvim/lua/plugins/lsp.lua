@@ -215,6 +215,8 @@ return {
 
 			postgrestools = {},
 
+			gopls = {},
+
 			lua_ls = {
 				-- cmd = { ... },
 				-- filetypes = { ... },
@@ -252,6 +254,7 @@ return {
 			"prettierd",
 			"prettier",
 			"black",
+			"goimports",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
