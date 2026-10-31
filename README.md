@@ -95,6 +95,9 @@ ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 # Ghostty
 ln -s ~/.dotfiles/.config/ghostty ~/.config/ghostty
 
+# Mouseless for mac
+ln -s ~/.dotfiles/.config/mouseless/config.yaml ~/Library/Application\ Support/Mouseless/configs/config.yaml
+
 # Tmux (optional)
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
