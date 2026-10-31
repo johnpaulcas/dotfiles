@@ -2,7 +2,8 @@
 theme = TokyoNight Moon
 # theme = rose-pine
 
-font-family = "JetBrainsMono Nerd Font"
+# font-family = "JetBrainsMono Nerd Font"
+font-family = "JetBrains Mono"
 
 
 # cursor-style = block
