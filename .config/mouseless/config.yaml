@@ -1,7 +1,7 @@
 app_version: 1.1.0
 behavior_configs:
-- base_move_speed: 5
-  base_wheel_speed: 16
+- base_move_speed: 10
+  base_wheel_speed: 16.0
   default_mouse_action: click
   free_mode_after_move: false
   free_mode_auto_off_s: 0
@@ -16,16 +16,16 @@ behavior_configs:
   mouse_value_cycle_behavior: once
   move_duration_ms: 100
   move_real_cursor_with_virtual: false
-  move_speed_multiplier: 3
+  move_speed_multiplier: 3.0
   movement_easing: 0.2
   multi_action_timeout_ms: 400
   name: main_behavior
   send_escape_after_global_alt_tap__windows: true
   tap_threshold_ms: 250
   wheel_easing: 0.3
-  wheel_speed_multiplier: 4
-  wheel_step_size: 100
-  wheel_step_size_large: 500
+  wheel_speed_multiplier: 4.0
+  wheel_step_size: 100.0
+  wheel_step_size_large: 500.0
 classname: AppConfig
 custom_actions: []
 custom_monitor_assignments: []
@@ -305,13 +305,13 @@ keymaps:
     hold for middle button: null
     hold for move: OptionLeft
     hold for right button: CommandRight
-    hold for speed decrease: A
+    hold for speed decrease: F15
     hold for speed increase:
-    - R
-    - S
-    - T
+    - '1'
+    - '2'
+    - '3'
     increase overlay opacity: ArrowUp
-    invert colors: null
+    invert colors: F2
     jump to bottom: null
     jump to left edge: null
     jump to right edge: null
@@ -388,9 +388,9 @@ name: ''
 overlay_scaling: auto
 style_configs:
 - always_on_subgrid_rgba:
-  - 1
-  - 1
-  - 1
+  - 1.0
+  - 1.0
+  - 1.0
   - 0.2
   background_colors:
   - - 0.49
@@ -457,17 +457,17 @@ style_configs:
   free_mode_indicator_offset_x: 8
   free_mode_indicator_offset_y: 20
   free_mode_indicator_rgba:
-  - 0.3111681543955326
-  - 0.6385733621274701
-  - 0.6463575752640848
-  - 0.5
+  - 0.5451617900277204
+  - 0.4861992226378085
+  - 0.9651704619003852
+  - 0.7
   free_mode_indicator_size: 5
-  free_mode_status_display: toast
+  free_mode_status_display: cursor
   grid_line_style: lines
   grid_rgba:
-  - 1
-  - 1
-  - 1
+  - 1.0
+  - 1.0
+  - 1.0
   - 0.5
   highlight_animation_ms: 0
   highlight_rgba:
@@ -491,30 +491,30 @@ style_configs:
   show_initial_highlight: false
   subgrid_font_size_multiplier: 0.75
   subgrid_rgba:
-  - 1
-  - 1
-  - 1
+  - 1.0
+  - 1.0
+  - 1.0
   - 0.5
   subgrid_text_rgba:
-  - 1
-  - 1
-  - 1
+  - 1.0
+  - 1.0
+  - 1.0
   - 0.5
   text_rgba:
-  - 1
-  - 1
-  - 1
-  - 1
-  text_shadow_blur_radius: 4
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  text_shadow_blur_radius: 4.0
   text_shadow_offset:
-  - 0
-  - 0
+  - 0.0
+  - 0.0
   text_shadow_rgba:
   - 0.02
   - 0.04
   - 0.06
-  - 1
-  text_y_offset: 0
+  - 1.0
+  text_y_offset: 0.0
   toast_opacity: 0.5
   use_bg_color_transforms: false
   window_opacity: 1.0
