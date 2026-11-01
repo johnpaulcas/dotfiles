@@ -89,3 +89,4 @@ zstyle ':completion:*' fzf-preview \
 zstyle ':completion:*' fzf-completion-opts '--layout=reverse --info=inline'
 
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
