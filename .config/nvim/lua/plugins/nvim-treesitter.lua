@@ -29,7 +29,8 @@ return {
 		"solidity",
 		"rust",
 		"zig",
-		"python"
+		"python",
+		"kotlin"
 	    },
 	    sync_install = false,
 	    highlight = { enable = true },

@@ -139,6 +139,24 @@ Press prefix + I (capital i, as in Install) to fetch the plugin
 
 ---
 
+## 🟣 Kotlin LSP
+
+Uses the official [Kotlin LSP](https://github.com/Kotlin/kotlin-lsp) from JetBrains, installed through Mason. It bundles its own Java runtime, so no separate JDK is needed to run it.
+
+Mason installs the server automatically when Neovim starts. If it's missing, install it manually inside Neovim:
+
+```vim
+:MasonInstall kotlin-lsp
+```
+
+> 💡 The download is large (about 1.1 GB once installed), so it can take a few minutes the first time.
+
+Then open a `.kt` file from a Gradle or Maven project. The server only starts when it finds a project root such as `settings.gradle.kts`, `build.gradle.kts` or `pom.xml`. The first launch is slow while the project is imported and indexed.
+
+> ⚠️ Kotlin LSP is in alpha, and Kotlin Multiplatform projects are not supported yet.
+
+---
+
 ## 🖋 Fonts
 
 Use any Nerd Font for icon support in Neovim, Tmux, and Zsh:

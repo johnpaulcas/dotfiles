@@ -213,9 +213,11 @@ return {
 
 			ts_ls = {},
 
-			postgrestools = {},
+			postgres_lsp = {},
 
 			gopls = {},
+
+			kotlin_lsp = {},
 
 			lua_ls = {
 				-- cmd = { ... },
@@ -257,6 +259,14 @@ return {
 			"goimports",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+
+		-- Mason ships the Kotlin server as `intellij-server`, the pinned nvim-lspconfig still expects `kotlin-lsp`
+		vim.lsp.config("kotlin_lsp", { cmd = { "intellij-server", "--stdio" } })
+		-- Same for Postgres: Mason renamed postgrestools to postgres-language-server
+		vim.lsp.config("postgres_lsp", {
+			cmd = { "postgres-language-server", "lsp-proxy" },
+			root_markers = { "postgres-language-server.jsonc", "postgrestools.jsonc" },
+		})
 
 		require("mason-lspconfig").setup({
 			ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
