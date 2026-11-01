@@ -1,6 +1,6 @@
 app_version: 1.1.0
 behavior_configs:
-- base_move_speed: 10
+- base_move_speed: 8
   base_wheel_speed: 16.0
   default_mouse_action: click
   free_mode_after_move: false
@@ -462,7 +462,7 @@ style_configs:
   - 0.9651704619003852
   - 0.7
   free_mode_indicator_size: 5
-  free_mode_status_display: cursor
+  free_mode_status_display: both
   grid_line_style: lines
   grid_rgba:
   - 1.0
@@ -515,7 +515,7 @@ style_configs:
   - 0.06
   - 1.0
   text_y_offset: 0.0
-  toast_opacity: 0.5
+  toast_opacity: 0.7
   use_bg_color_transforms: false
   window_opacity: 1.0
 translate_presets_to_keyboard_layout: true
