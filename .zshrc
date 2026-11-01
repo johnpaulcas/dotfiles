@@ -58,6 +58,10 @@ compinit
 DISABLE_AUTO_TITLE="true"
 
 # ───────────────────────────────────────────────────────────────
+# Enable editor mode
+export EDITOR=nvim
+
+# ───────────────────────────────────────────────────────────────
 # Zinit plugins
 # Autosuggestions (fish-style ghost text)
 zinit light zsh-users/zsh-autosuggestions
