@@ -90,3 +90,7 @@ zstyle ':completion:*' fzf-completion-opts '--layout=reverse --info=inline'
 
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+# Option+Backspace deletes a word. EDITOR=nvim puts zsh in vi mode, which leaves this key unbound.
+bindkey '^[^?' backward-kill-word
+bindkey -M vicmd '^[^?' backward-kill-word
