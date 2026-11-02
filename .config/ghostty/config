@@ -1,5 +1,6 @@
 #theme = TokyoNight Storm
-theme = TokyoNight Moon
+# theme = TokyoNight Moon
+theme = Catppuccin Mocha
 # theme = rose-pine
 
 # font-family = "JetBrainsMono Nerd Font"
@@ -32,8 +33,13 @@ macos-option-as-alt = true
 adjust-cursor-thickness=5
 # adjust-box-thickness=-80%
 #background-opacity=0.7
+background-opacity = 0.88
+background-blur = 20
+window-padding-x = 12
+window-padding-y = 10
 
 clipboard-trim-trailing-spaces = true
 mouse-hide-while-typing = true
 macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = transparent
 
