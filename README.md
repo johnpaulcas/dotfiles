@@ -95,9 +95,6 @@ ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 # Ghostty
 ln -s ~/.dotfiles/.config/ghostty ~/.config/ghostty
 
-# Mouseless for mac
-ln -s ~/.dotfiles/.config/mouseless/config.yaml ~/Library/Application\ Support/Mouseless/configs/config.yaml
-
 # Tmux (optional)
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
@@ -106,6 +103,24 @@ ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ```
 
 > ⚠️ Make sure `~/.config/nvim` does not already exist before symlinking.
+
+#### Mouseless (macOS, Colemak-DH only)
+
+Run this only if you use Colemak-DH, because this config's labels are set up for that layout.
+
+Create the folder first. Don't create `config.yaml` by hand, the symlink provides it:
+
+```bash
+mkdir -p ~/Library/Application\ Support/Mouseless/configs
+```
+
+Then link the config:
+
+```bash
+ln -s ~/.dotfiles/.config/mouseless/config.yaml ~/Library/Application\ Support/Mouseless/configs/config.yaml
+```
+
+> ⚠️ If Mouseless already made its own `config.yaml`, move it first or `ln` says "File exists".
 
 ### 5. Launch Neovim
 
