@@ -123,6 +123,12 @@ Install tmux/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
+Install the Catppuccin theme. It's cloned by hand instead of through TPM, and `.tmux.conf` loads it from this path:
+
+```bash
+git clone --depth 1 -b v2.3.2 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+```
+
 After installation enter to tmux mode by running
 
 ```bash
