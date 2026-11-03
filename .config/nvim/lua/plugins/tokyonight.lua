@@ -3,7 +3,13 @@ return {
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("tokyonight").setup({})
+		require("tokyonight").setup({
+			transparent = true,
+			styles = {
+				sidebars = "transparent",
+				floats = "transparent",
+			},
+		})
 		-- vim.cmd.colorscheme("tokyonight-storm")
 		-- vim.cmd.colorscheme("tokyonight-night")
 		-- vim.cmd.colorscheme("tokyonight-storm")
