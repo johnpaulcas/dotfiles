@@ -15,7 +15,7 @@ alias vim="nvim"
 alias vi="nvim"
 
 # Make sure to install lazygit, check `https://github.com/jesseduffield/lazygit` for installation process
-alias lgit="lazygit"
+alias lg="lazygit"
 
 alias zr="source ~/.zshrc"
 alias zshrc="vim ~/.dotfiles/.zshrc"
