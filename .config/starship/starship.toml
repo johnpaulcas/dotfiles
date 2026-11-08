@@ -2,7 +2,7 @@
 
 add_newline = false
 format = "$directory$character"
-right_format = "$git_branch$git_status$time"
+right_format = "$git_branch$git_status$cmd_duration"
 
 [directory]
 style = "bold #b4befe"
@@ -24,8 +24,7 @@ format = "[$symbol $branch]($style) "
 style = "#f9e2af"
 format = "[($all_status$ahead_behind )]($style)"
 
-[time]
-disabled = false
-time_format = "%R"
+[cmd_duration]
+min_time = 2000
 style = "#6c7086"
-format = "[$time]($style)"
+format = "[took $duration]($style)"
