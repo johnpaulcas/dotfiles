@@ -72,6 +72,7 @@ brew install fzf tmux neovim git node rust python lazygit starship
 [ -d ~/.config/nvim ] && mv ~/.config/nvim ~/.config/nvim.bak
 [ -f ~/.zshrc ] && mv ~/.zshrc ~/.zshrc.bak
 [ -f ~/.tmux.conf ] && mv ~/.tmux.conf ~/.tmux.conf.bak
+[ -f ~/.ideavimrc ] && mv ~/.ideavimrc ~/.ideavimrc.bak
 ```
 
 ### 2. Clone this repo
@@ -100,6 +101,9 @@ ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
 # Zsh (optional)
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
+
+# IdeaVim (optional, for JetBrains IDEs)
+ln -s ~/.dotfiles/.ideavimrc ~/.ideavimrc
 ```
 
 > ⚠️ Make sure `~/.config/nvim` does not already exist before symlinking.
@@ -175,6 +179,42 @@ Mason installs the server automatically when Neovim starts. If it's missing, ins
 Then open a `.kt` file from a Gradle or Maven project. The server only starts when it finds a project root such as `settings.gradle.kts`, `build.gradle.kts` or `pom.xml`. The first launch is slow while the project is imported and indexed.
 
 > ⚠️ Kotlin LSP is in alpha, and Kotlin Multiplatform projects are not supported yet.
+
+---
+
+## 🧠 IdeaVim (JetBrains IDEs)
+
+Vim keys for IntelliJ IDEA, Android Studio, and other JetBrains IDEs. The mappings follow the Neovim config, so the same keys work in both editors.
+
+### Setup
+
+1. Install the **IdeaVim** plugin: *Settings → Plugins → Marketplace → "IdeaVim"*, then restart the IDE.
+2. Link the config (skip this if you already did it in step 4 above):
+
+   ```bash
+   [ -f ~/.ideavimrc ] && [ ! -L ~/.ideavimrc ] && mv ~/.ideavimrc ~/.ideavimrc.bak
+   ln -s ~/.dotfiles/.ideavimrc ~/.ideavimrc
+   ```
+
+3. Reload it inside the IDE with `<Space>vr`, or run `:source ~/.ideavimrc`.
+4. Optional: install the **Which-Key** plugin from the Marketplace, then uncomment `set which-key` and `set notimeout` in `.ideavimrc`. It shows a popup of your leader mappings.
+
+### Relative line numbers
+
+`.ideavimrc` sets both of these, which gives hybrid numbering: the current line shows its real number and every other line shows its distance from the cursor:
+
+```vim
+set number
+set relativenumber
+```
+
+> ⚠️ If numbers don't appear, turn on *Settings → Editor → General → Appearance → Show line numbers*, then reload.
+
+### Key mappings
+
+📖 See the full cheat sheet: [IntelliJ / Android Studio Vim Mappings](docs/intellij-vim-mappings.md)
+
+Inside the IDE, press `<Space>?` to open it.
 
 ---
 
