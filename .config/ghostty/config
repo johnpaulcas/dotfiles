@@ -15,6 +15,7 @@ shell-integration-features = no-cursor
 
 # for rose pine (favorate)
 cursor-color = #c4a7e7
+# cursor-color = #FFFFFF
 
 # cursor-color = #a9b1d6
 #cursor-color = #ebbcba
@@ -26,6 +27,11 @@ cursor-color = #c4a7e7
 #custom-shader-animation = true
 # custom-shader = shaders/cursor_debug.glsl
 custom-shader = shaders/cursor_smear.glsl
+# custom-shader = shaders/cursor_golden_gate.glsl
+# custom-shader = shaders/cursor_comet.glsl
+# custom-shader = shaders/cursor_ripple.glsl
+# custom-shader = shaders/cursor_glide.glsl
+custom-shader-animation = true
 # custom-shader = shaders/cursor_frozen.glsl
 # custom-shader-animation = always
 
