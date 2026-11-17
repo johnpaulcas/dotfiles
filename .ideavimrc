@@ -1,0 +1,115 @@
+" ============================================================
+" IdeaVim config — mirrors ~/.dotfiles/.config/nvim where possible
+" Reload inside the IDE: <leader>vr  (or :source ~/.ideavimrc)
+" Find action IDs: :actionlist <query>  or  Help > Track Action Ids
+" ============================================================
+
+let mapleader = " "
+
+" ---------- Options ----------
+set number              " absolute number on the current line
+set relativenumber      " relative numbers on every other line (hybrid)
+set clipboard=unnamedplus
+set clipboard+=ideaput  " paste through the IDE (keeps import/format on paste)
+set scrolloff=10
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set showmode
+set visualbell          " no beeping
+set ideajoin            " smart J (joins strings, comments, etc.)
+set ideamarks           " vim marks sync with IDE bookmarks
+set idearefactormode=keep
+
+" ---------- Bundled IdeaVim plugins (no install needed) ----------
+set surround            " ys / cs / ds
+set commentary          " gc / gcc
+set highlightedyank     " flash the yanked text
+set NERDTree            " file tree with vim keys
+set argtextobj          " ia / aa: function arguments
+set textobj-entire      " ie / ae: entire buffer
+set exchange            " cx: swap two text regions
+
+" which-key needs the "Which-Key" plugin from the Marketplace.
+" Uncomment after installing it:
+" set which-key
+" set notimeout
+
+" ---------- General ----------
+nnoremap <Esc> :nohlsearch<CR>
+nnoremap <leader>h :nohlsearch<CR>
+nnoremap <leader>nh :nohlsearch<CR>
+nnoremap <leader>vr :action IdeaVim.ReloadVimRc.reload<CR>
+" Cheat sheet: docs/intellij-vim-mappings.md
+nnoremap <leader>? :e ~/.dotfiles/docs/intellij-vim-mappings.md<CR>
+
+" Scroll / search and keep cursor centered
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap { {zz
+nnoremap } }zz
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+
+" Keep selection when indenting in visual mode
+vnoremap < <gv
+vnoremap > >gv
+
+" ---------- Find (fzf-lua equivalents) ----------
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fg :action FindInPath<CR>
+nnoremap <leader>fw :action FindInPath<CR>
+nnoremap <leader>fb :action GotoAction<CR>
+nnoremap <leader>fr :action RecentFiles<CR>
+nnoremap <leader><leader> :action Switcher<CR>
+nnoremap <leader>/ :action Find<CR>
+
+" ---------- LSP-style navigation ----------
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gD :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gr :action FindUsages<CR>
+nnoremap gt :action GotoTypeDeclaration<CR>
+nnoremap gO :action FileStructurePopup<CR>
+nnoremap gW :action GotoSymbol<CR>
+nnoremap ga :action ShowIntentionActions<CR>
+vnoremap ga :action ShowIntentionActions<CR>
+nnoremap K :action QuickJavaDoc<CR>
+nnoremap <leader>rn :action RenameElement<CR>
+nnoremap <leader>cf :action ReformatCode<CR>
+nnoremap <leader>th :action ToggleInlayHintsGloballyAction<CR>
+
+" ---------- Diagnostics ----------
+nnoremap lg :action ShowErrorDescription<CR>
+nnoremap ]d :action GotoNextError<CR>
+nnoremap [d :action GotoPreviousError<CR>
+
+" ---------- Files / tree (oil.nvim "-" equivalent) ----------
+nnoremap - :action SelectInProjectView<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
+
+" ---------- Harpoon-ish (IDE bookmarks) ----------
+nnoremap <leader>a :action ToggleBookmark<CR>
+nnoremap <C-e> :action ShowBookmarks<CR>
+
+" ---------- Run / debug ----------
+nnoremap <leader>rr :action Run<CR>
+nnoremap <leader>rd :action Debug<CR>
+nnoremap <leader>db :action ToggleLineBreakpoint<CR>
+
+" ---------- Windows / tabs ----------
+nnoremap <leader>sv :action SplitVertically<CR>
+nnoremap <leader>sh :action SplitHorizontally<CR>
+nnoremap <leader>sx :action Unsplit<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <leader>z :action ToggleDistractionFreeMode<CR>
+
+" Jump back / forward like vim's jumplist, but across files
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
